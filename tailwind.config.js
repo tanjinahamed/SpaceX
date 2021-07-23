@@ -815,6 +815,9 @@ module.exports = {
         'myBackgroundColor': '#F7F7F7',
         'footerBg': '#EFEFEF',
         'hoverNav': '#88beec'
+      },
+      animation: {
+        'spin-slow': 'bounce 3s linear 5',
       }
     }
   },

@@ -9910,6 +9910,18 @@ video {
   }
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
 .animate-none {
   animation: none;
 }
@@ -9928,6 +9940,10 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.animate-spin-slow {
+  animation: bounce 3s linear 5;
 }
 
 .cursor-auto {
@@ -40314,6 +40330,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .sm\:animate-spin-slow {
+    animation: bounce 3s linear 5;
+  }
+
   .sm\:cursor-auto {
     cursor: auto;
   }
@@ -70624,6 +70644,10 @@ video {
 
   .md\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .md\:animate-spin-slow {
+    animation: bounce 3s linear 5;
   }
 
   .md\:cursor-auto {
@@ -100938,6 +100962,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .lg\:animate-spin-slow {
+    animation: bounce 3s linear 5;
+  }
+
   .lg\:cursor-auto {
     cursor: auto;
   }
@@ -131250,6 +131278,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .xl\:animate-spin-slow {
+    animation: bounce 3s linear 5;
+  }
+
   .xl\:cursor-auto {
     cursor: auto;
   }
@@ -161560,6 +161592,10 @@ video {
 
   .\32xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-spin-slow {
+    animation: bounce 3s linear 5;
   }
 
   .\32xl\:cursor-auto {

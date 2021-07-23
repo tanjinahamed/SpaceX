@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 const LoadMission = ({ mission }) => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
     console.log(mission)
     const { flight_number, launch_year, details } = mission;
     const { rocket_name } = mission.rocket;
     const { mission_patch_small, wikipedia } = mission.links;
 
     return (
-        <article className="flex flex-col bg-coolGray-50 border-2 mx-3 mb-6 shadow-md border-gray-50">
+        <article data-aos="zoom-in" className="flex flex-col bg-coolGray-50 border-2 mx-3 mb-6 shadow-md border-gray-50">
             <img alt="" className="object-cover w-auto p-8" src={mission_patch_small} />
             <div className="flex flex-col flex-1 p-6">
                 <small>
